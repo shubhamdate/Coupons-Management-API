@@ -223,6 +223,9 @@ The design is extensible so that new coupon types can be added in the future.
 
 * Add **multi-coupon stacking rules** (combine multiple coupons).
 * Enforce **coupon expiry validation** during application.
+* Currently, we are using **H2 (in-memory DB)** for faster development and testing.
+
+  * In **production or long-term usage**, we can switch to **SQL Server (SSMS)** or any other relational DB for persistence and scalability.
 * Add **better exception handling** (`@ControllerAdvice`, HTTP error codes).
 * Implement **coupon update (PUT)** endpoint.
 * Write **unit tests** for all coupon logics.
