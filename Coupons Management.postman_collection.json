@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "5f29d80b-9315-459c-9bb6-75338773f793",
+		"name": "Coupons Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17374331"
+	},
+	"item": [
+		{
+			"name": "Create a Coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"type\": \"CART_WISE\",\r\n  \"isActive\": true,\r\n  \"expiresAt\": \"2025-12-31T23:59:59\",\r\n  \"createdAt\": \"2025-09-14T10:00:00\",\r\n  \"updatedAt\": \"2025-09-14T10:00:00\",\r\n  \"cartWiseDetails\": {\r\n    \"thresholdAmount\": 100.0,\r\n    \"discountValue\": 10.0,\r\n    \"discountType\": \"PERCENT\"\r\n  }\r\n}\r\n\r\n// {\r\n//   \"id\": 2,\r\n//   \"type\": \"PRODUCT_WISE\",\r\n//   \"isActive\": true,\r\n//   \"expiresAt\": \"2025-12-31T23:59:59\",\r\n//   \"productWiseDetails\": {\r\n//     \"productId\": 1,\r\n//     \"discountValue\": 20.0,\r\n//     \"discountType\": \"PERCENT\"\r\n//   }\r\n// }\r\n\r\n// {\r\n//   \"id\": 3,\r\n//   \"type\": \"BXGY\",\r\n//   \"isActive\": true,\r\n//   \"expiresAt\": \"2025-12-31T23:59:59\",\r\n//   \"bxgyDetails\": {\r\n//     \"repetitionLimit\": 2,\r\n//     \"buyProducts\": [\r\n//       { \"productId\": 1, \"quantity\": 2 },\r\n//       { \"productId\": 2, \"quantity\": 1 }\r\n//     ],\r\n//     \"getProducts\": [\r\n//       { \"productId\": 3, \"quantity\": 1, \"discountType\": \"FREE\", \"discountValue\": 0 }\r\n//     ]\r\n//   }\r\n// }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/coupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Coupons",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//   \"id\": 1,\r\n//   \"type\": \"CART_WISE\",\r\n//   \"isActive\": true,\r\n//   \"expiresAt\": \"2025-12-31T23:59:59\",\r\n//   \"createdAt\": \"2025-09-14T10:00:00\",\r\n//   \"updatedAt\": \"2025-09-14T10:00:00\",\r\n//   \"cartWiseDetails\": {\r\n//     \"thresholdAmount\": 100.0,\r\n//     \"discountValue\": 10.0,\r\n//     \"discountType\": \"PERCENT\"\r\n//   }\r\n// }\r\n\r\n// {\r\n//   \"id\": 2,\r\n//   \"type\": \"PRODUCT_WISE\",\r\n//   \"isActive\": true,\r\n//   \"expiresAt\": \"2025-12-31T23:59:59\",\r\n//   \"productWiseDetails\": {\r\n//     \"productId\": 1,\r\n//     \"discountValue\": 20.0,\r\n//     \"discountType\": \"PERCENT\"\r\n//   }\r\n// }\r\n\r\n{\r\n  \"id\": 3,\r\n  \"type\": \"BXGY\",\r\n  \"isActive\": true,\r\n  \"expiresAt\": \"2025-12-31T23:59:59\",\r\n  \"bxgyDetails\": {\r\n    \"repetitionLimit\": 2,\r\n    \"buyProducts\": [\r\n      { \"productId\": 1, \"quantity\": 2 },\r\n      { \"productId\": 2, \"quantity\": 1 }\r\n    ],\r\n    \"getProducts\": [\r\n      { \"productId\": 3, \"quantity\": 1, \"discountType\": \"FREE\", \"discountValue\": 0 }\r\n    ]\r\n  }\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/coupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Coupon By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//   \"id\": 1,\r\n//   \"type\": \"CART_WISE\",\r\n//   \"isActive\": true,\r\n//   \"expiresAt\": \"2025-12-31T23:59:59\",\r\n//   \"createdAt\": \"2025-09-14T10:00:00\",\r\n//   \"updatedAt\": \"2025-09-14T10:00:00\",\r\n//   \"cartWiseDetails\": {\r\n//     \"thresholdAmount\": 100.0,\r\n//     \"discountValue\": 10.0,\r\n//     \"discountType\": \"PERCENT\"\r\n//   }\r\n// }\r\n\r\n// {\r\n//   \"id\": 2,\r\n//   \"type\": \"PRODUCT_WISE\",\r\n//   \"isActive\": true,\r\n//   \"expiresAt\": \"2025-12-31T23:59:59\",\r\n//   \"productWiseDetails\": {\r\n//     \"productId\": 1,\r\n//     \"discountValue\": 20.0,\r\n//     \"discountType\": \"PERCENT\"\r\n//   }\r\n// }\r\n\r\n{\r\n  \"id\": 3,\r\n  \"type\": \"BXGY\",\r\n  \"isActive\": true,\r\n  \"expiresAt\": \"2025-12-31T23:59:59\",\r\n  \"bxgyDetails\": {\r\n    \"repetitionLimit\": 2,\r\n    \"buyProducts\": [\r\n      { \"productId\": 1, \"quantity\": 2 },\r\n      { \"productId\": 2, \"quantity\": 1 }\r\n    ],\r\n    \"getProducts\": [\r\n      { \"productId\": 3, \"quantity\": 1, \"discountType\": \"FREE\", \"discountValue\": 0 }\r\n    ]\r\n  }\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/coupons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Coupon",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//   \"id\": 1,\r\n//   \"type\": \"CART_WISE\",\r\n//   \"isActive\": true,\r\n//   \"expiresAt\": \"2025-12-31T23:59:59\",\r\n//   \"createdAt\": \"2025-09-14T10:00:00\",\r\n//   \"updatedAt\": \"2025-09-14T10:00:00\",\r\n//   \"cartWiseDetails\": {\r\n//     \"thresholdAmount\": 100.0,\r\n//     \"discountValue\": 10.0,\r\n//     \"discountType\": \"PERCENT\"\r\n//   }\r\n// }\r\n\r\n// {\r\n//   \"id\": 2,\r\n//   \"type\": \"PRODUCT_WISE\",\r\n//   \"isActive\": true,\r\n//   \"expiresAt\": \"2025-12-31T23:59:59\",\r\n//   \"productWiseDetails\": {\r\n//     \"productId\": 1,\r\n//     \"discountValue\": 20.0,\r\n//     \"discountType\": \"PERCENT\"\r\n//   }\r\n// }\r\n\r\n{\r\n  \"id\": 3,\r\n  \"type\": \"BXGY\",\r\n  \"isActive\": true,\r\n  \"expiresAt\": \"2025-12-31T23:59:59\",\r\n  \"bxgyDetails\": {\r\n    \"repetitionLimit\": 2,\r\n    \"buyProducts\": [\r\n      { \"productId\": 1, \"quantity\": 2 },\r\n      { \"productId\": 2, \"quantity\": 1 }\r\n    ],\r\n    \"getProducts\": [\r\n      { \"productId\": 3, \"quantity\": 1, \"discountType\": \"FREE\", \"discountValue\": 0 }\r\n    ]\r\n  }\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/coupons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Specific Coupon to Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    { \"productId\": 1, \"quantity\": 3, \"price\": 50 },\r\n    { \"productId\": 2, \"quantity\": 2, \"price\": 30 },\r\n    { \"productId\": 3, \"quantity\": 1, \"price\": 25 }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/coupons/3/apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupons",
+						"3",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Applicable Coupons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    { \"productId\": 1, \"quantity\": 3, \"price\": 50 },\r\n    { \"productId\": 2, \"quantity\": 2, \"price\": 30 },\r\n    { \"productId\": 3, \"quantity\": 1, \"price\": 25 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/coupons/applicable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupons",
+						"applicable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Coupon and Get Updated Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    { \"productId\": 1, \"quantity\": 3, \"price\": 50 },\r\n    { \"productId\": 2, \"quantity\": 2, \"price\": 30 },\r\n    { \"productId\": 3, \"quantity\": 1, \"price\": 25 }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/coupons/3/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupons",
+						"3",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
